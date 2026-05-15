@@ -1,0 +1,340 @@
+/* ============================================================
+   AI Resume Analyzer — Custom Streamlit Theme CSS
+   Premium dark/light mode, glass cards, animations
+   ============================================================ */
+
+/* ── Google Fonts ─────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700&display=swap');
+
+/* ── CSS Variables ────────────────────────────────────────── */
+:root {
+  --primary: #6C63FF;
+  --primary-dark: #5A52D5;
+  --primary-light: #8B85FF;
+  --secondary: #F7F7FE;
+  --accent: #10B981;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+  --dark: #0F0F1A;
+  --dark-card: #1A1A2E;
+  --dark-border: #2D2D4E;
+  --text-primary: #E2E8F0;
+  --text-secondary: #94A3B8;
+  --gradient: linear-gradient(135deg, #6C63FF 0%, #8B85FF 50%, #A78BFA 100%);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.10);
+  --shadow: 0 8px 32px rgba(108, 99, 255, 0.15);
+  --shadow-lg: 0 20px 60px rgba(108, 99, 255, 0.25);
+  --radius: 16px;
+  --radius-sm: 10px;
+}
+
+/* ── Global Reset ─────────────────────────────────────────── */
+* { box-sizing: border-box; }
+
+.stApp {
+  font-family: 'Inter', sans-serif !important;
+  background: var(--dark) !important;
+  color: var(--text-primary) !important;
+}
+
+/* ── Main Content Area ────────────────────────────────────── */
+.main .block-container {
+  padding: 1.5rem 2rem 3rem !important;
+  max-width: 1400px !important;
+}
+
+/* ── Hide Streamlit Branding ──────────────────────────────── */
+#MainMenu, footer, header { visibility: hidden !important; }
+
+/* ── Hero Banner ──────────────────────────────────────────── */
+.hero-banner {
+  background: var(--gradient);
+  border-radius: var(--radius);
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.hero-banner::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 400px;
+  height: 400px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 50%;
+}
+
+.hero-banner h1 {
+  font-family: 'Outfit', sans-serif !important;
+  font-size: 2.4rem !important;
+  font-weight: 700 !important;
+  color: white !important;
+  margin: 0 0 0.5rem !important;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.hero-banner p {
+  color: rgba(255,255,255,0.85) !important;
+  font-size: 1.1rem !important;
+  margin: 0 !important;
+}
+
+/* ── Metric Cards ─────────────────────────────────────────── */
+.metric-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.metric-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 0;
+}
+
+.metric-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  border-color: var(--primary);
+}
+
+.metric-card:hover::before { opacity: 0.06; }
+
+.metric-value {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block;
+  line-height: 1.1;
+}
+
+.metric-label {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-top: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+/* ── Glass Card ───────────────────────────────────────────── */
+.glass-card {
+  background: var(--dark-card);
+  border: 1px solid var(--dark-border);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  margin-bottom: 1.25rem;
+  box-shadow: var(--shadow);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 8px 40px rgba(108,99,255,0.2);
+}
+
+/* ── ATS Score Gauge ──────────────────────────────────────── */
+.score-gauge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.score-number {
+  font-family: 'Outfit', sans-serif;
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.score-excellent { color: #10B981; }
+.score-good { color: #F59E0B; }
+.score-poor { color: #EF4444; }
+
+/* ── Keyword Tags ─────────────────────────────────────────── */
+.tag-container { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.5rem 0; }
+
+.tag {
+  padding: 0.3rem 0.8rem;
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: inline-block;
+}
+
+.tag-success { background: rgba(16,185,129,0.15); color: #10B981; border: 1px solid rgba(16,185,129,0.3); }
+.tag-danger  { background: rgba(239,68,68,0.15);  color: #EF4444; border: 1px solid rgba(239,68,68,0.3); }
+.tag-primary { background: rgba(108,99,255,0.15); color: #8B85FF; border: 1px solid rgba(108,99,255,0.3); }
+.tag-warning { background: rgba(245,158,11,0.15); color: #F59E0B; border: 1px solid rgba(245,158,11,0.3); }
+
+/* ── Section Heading ──────────────────────────────────────── */
+.section-heading {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 1.5rem 0 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* ── Progress Bar ─────────────────────────────────────────── */
+.skill-bar-wrap { margin: 0.6rem 0; }
+
+.skill-bar-label {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  margin-bottom: 0.3rem;
+}
+
+.skill-bar-bg {
+  background: var(--dark-border);
+  border-radius: 100px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  border-radius: 100px;
+  background: var(--gradient);
+  transition: width 1s ease;
+}
+
+/* ── Upload Zone ──────────────────────────────────────────── */
+.upload-zone {
+  border: 2px dashed var(--dark-border);
+  border-radius: var(--radius);
+  padding: 3rem;
+  text-align: center;
+  transition: border-color 0.3s, background 0.3s;
+  cursor: pointer;
+}
+
+.upload-zone:hover {
+  border-color: var(--primary);
+  background: rgba(108,99,255,0.05);
+}
+
+/* ── Alert Boxes ──────────────────────────────────────────── */
+.alert {
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-sm);
+  margin: 1rem 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.alert-success { background: rgba(16,185,129,0.12); border-left: 4px solid #10B981; color: #6EE7B7; }
+.alert-warning  { background: rgba(245,158,11,0.12); border-left: 4px solid #F59E0B; color: #FCD34D; }
+.alert-info     { background: rgba(108,99,255,0.12); border-left: 4px solid #6C63FF; color: #A78BFA; }
+.alert-danger   { background: rgba(239,68,68,0.12);  border-left: 4px solid #EF4444; color: #FCA5A5; }
+
+/* ── Streamlit Widget Overrides ───────────────────────────── */
+.stButton > button {
+  background: var(--gradient) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: var(--radius-sm) !important;
+  padding: 0.65rem 1.5rem !important;
+  font-weight: 600 !important;
+  font-family: 'Inter', sans-serif !important;
+  transition: opacity 0.2s, transform 0.2s !important;
+  box-shadow: 0 4px 15px rgba(108,99,255,0.3) !important;
+}
+
+.stButton > button:hover {
+  opacity: 0.9 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 6px 20px rgba(108,99,255,0.4) !important;
+}
+
+.stTextInput > div > div > input,
+.stTextArea > div > div > textarea,
+.stSelectbox > div > div {
+  background: var(--dark-card) !important;
+  border: 1px solid var(--dark-border) !important;
+  border-radius: var(--radius-sm) !important;
+  color: var(--text-primary) !important;
+  font-family: 'Inter', sans-serif !important;
+  transition: border-color 0.2s !important;
+}
+
+.stTextInput > div > div > input:focus,
+.stTextArea > div > div > textarea:focus {
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 3px rgba(108,99,255,0.15) !important;
+}
+
+/* ── Sidebar ──────────────────────────────────────────────── */
+[data-testid="stSidebar"] {
+  background: var(--dark-card) !important;
+  border-right: 1px solid var(--dark-border) !important;
+}
+
+[data-testid="stSidebar"] .stMarkdown {
+  color: var(--text-secondary) !important;
+}
+
+/* ── Tabs ─────────────────────────────────────────────────── */
+.stTabs [data-baseweb="tab"] {
+  background: transparent !important;
+  color: var(--text-secondary) !important;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0 !important;
+  font-weight: 500 !important;
+}
+
+.stTabs [data-baseweb="tab"][aria-selected="true"] {
+  background: rgba(108,99,255,0.15) !important;
+  color: var(--primary-light) !important;
+  border-bottom: 2px solid var(--primary) !important;
+}
+
+/* ── Divider ──────────────────────────────────────────────── */
+.custom-divider {
+  height: 1px;
+  background: var(--dark-border);
+  margin: 1.5rem 0;
+  border: none;
+}
+
+/* ── Pulse Animation ──────────────────────────────────────── */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 10px rgba(108,99,255,0.3); }
+  50% { box-shadow: 0 0 25px rgba(108,99,255,0.6); }
+}
+
+.pulse { animation: pulse-glow 2s infinite; }
+
+/* ── Fade In ──────────────────────────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in { animation: fadeInUp 0.5s ease forwards; }

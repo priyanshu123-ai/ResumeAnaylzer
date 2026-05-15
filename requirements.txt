@@ -1,0 +1,76 @@
+# ============================================================
+# AI Resume Analyzer — Requirements
+# Install with: pip install -r requirements.txt
+# ============================================================
+
+# ── Web Framework ────────────────────────────────────────────
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+python-multipart==0.0.9          # For file uploads in FastAPI
+
+# ── Frontend ─────────────────────────────────────────────────
+streamlit==1.35.0
+streamlit-option-menu==0.3.12    # Sidebar navigation component
+streamlit-extras==0.4.3
+
+# ── Database ─────────────────────────────────────────────────
+sqlalchemy==2.0.29
+pymysql==1.1.0                   # MySQL driver
+alembic==1.13.1                  # Database migrations
+cryptography==42.0.5             # Required by pymysql for TLS
+
+# ── Auth & Security ──────────────────────────────────────────
+python-jose[cryptography]==3.3.0 # JWT token generation/verification
+passlib[bcrypt]==1.7.4           # Password hashing
+email-validator==2.1.1
+
+# ── Configuration ────────────────────────────────────────────
+pydantic==2.7.1
+pydantic-settings==2.2.1
+python-dotenv==1.0.1
+
+# ── Document Parsing ─────────────────────────────────────────
+pymupdf==1.24.3                  # PDF text extraction (PyMuPDF / fitz)
+python-docx==1.1.0               # DOCX text extraction
+
+# ── Machine Learning ─────────────────────────────────────────
+scikit-learn==1.4.2
+numpy==1.26.4
+pandas==2.2.2
+scipy==1.13.0                    # Used by scikit-learn cosine similarity
+joblib==1.4.2                    # Model serialization
+
+# ── NLP / Hugging Face ───────────────────────────────────────
+transformers==4.40.1
+torch==2.3.0                     # PyTorch (CPU version; use torch+cu118 for GPU)
+spacy==3.7.4                     # NER and tokenization
+# After install, download model: python -m spacy download en_core_web_sm
+
+# ── Google Gemini API ────────────────────────────────────────
+google-generativeai==0.5.4
+
+# ── Report Generation ────────────────────────────────────────
+reportlab==4.1.0                 # PDF report generation
+Pillow==10.3.0                   # Image processing for reports
+
+# ── Data Visualization ───────────────────────────────────────
+plotly==5.22.0
+matplotlib==3.9.0
+
+# ── HTTP Client ──────────────────────────────────────────────
+requests==2.31.0
+httpx==0.27.0                    # Async HTTP for FastAPI tests
+aiofiles==23.2.1                 # Async file I/O
+
+# ── Utilities ────────────────────────────────────────────────
+python-slugify==8.0.4
+tenacity==8.2.3                  # Retry logic for API calls
+rich==13.7.1                     # Pretty logging in terminal
+
+# ── Testing ──────────────────────────────────────────────────
+pytest==8.2.0
+pytest-asyncio==0.23.7
+
+# ── Email ────────────────────────────────────────────────────
+# (Optional) Uncomment if you want email report delivery
+# fastapi-mail==1.4.1

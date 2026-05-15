@@ -1,0 +1,71 @@
+[2026-05-14 22:23:26] INFO — backend.services.ml_service:143 — Starting full ATS analysis...
+[2026-05-14 22:23:26] INFO — backend.services.ml_service:168 — ATS complete — total: 35.5, keyword: 41.7, cosine: 29.26
+[2026-05-14 22:25:00] INFO — backend.models.resume_classifier:78 — ✅ Resume classifier trained on 20 samples (12 classes)
+[2026-05-14 22:25:01] DEBUG — backend.models.resume_classifier:114 — Classified as 'Data Science' with 61.5% confidence
+[2026-05-14 22:25:01] DEBUG — backend.models.skill_predictor:102 — Skill prediction for 'Backend Development': 7 essential missing, 6 advanced missing
+[2026-05-14 22:25:01] INFO — backend.models.candidate_ranker:90 — Ranked 2 candidates. Top score: 17.76
+[2026-05-14 22:28:54] INFO — backend.main:38 — [START] Starting AI Resume Analyzer v1.0.0
+[2026-05-14 22:28:55] INFO — backend.database.db:74 — [OK] Database tables created/verified successfully.
+[2026-05-14 22:28:55] ERROR — backend.main:84 — Failed to create admin user: bcrypt: no backends available -- recommend you install one (e.g. 'pip install bcrypt')
+[2026-05-14 22:28:55] INFO — backend.main:50 — [OK] Application startup complete
+[2026-05-14 22:30:02] INFO — backend.main:38 — [START] Starting AI Resume Analyzer v1.0.0
+[2026-05-14 22:30:02] INFO — backend.database.db:74 — [OK] Database tables created/verified successfully.
+[2026-05-14 22:30:02] ERROR — backend.main:84 — Failed to create admin user: password cannot be longer than 72 bytes, truncate manually if necessary (e.g. my_password[:72])
+[2026-05-14 22:30:02] INFO — backend.main:50 — [OK] Application startup complete
+[2026-05-14 22:31:22] INFO — backend.main:38 — [START] Starting AI Resume Analyzer v1.0.0
+[2026-05-14 22:31:22] INFO — backend.database.db:74 — [OK] Database tables created/verified successfully.
+[2026-05-14 22:31:23] INFO — backend.main:80 — [OK] Admin user created: admin@resumeanalyzer.com
+[2026-05-14 22:31:23] INFO — backend.main:50 — [OK] Application startup complete
+[2026-05-14 22:35:03] INFO — backend.main:38 — [START] Starting AI Resume Analyzer v1.0.0
+[2026-05-14 22:35:03] INFO — backend.database.db:74 — [OK] Database tables created/verified successfully.
+[2026-05-14 22:35:03] INFO — backend.main:82 — [INFO]  Admin user already exists: admin@resumeanalyzer.com
+[2026-05-14 22:35:03] INFO — backend.main:50 — [OK] Application startup complete
+[2026-05-14 22:37:32] INFO — backend.controllers.auth_controller:60 — New user registered: priyanshuk9532@gmail.com (id=2)
+[2026-05-14 22:37:57] DEBUG — backend.utils.auth_utils:93 — Created JWT token for subject: priyanshuk9532@gmail.com
+[2026-05-14 22:37:57] INFO — backend.controllers.auth_controller:101 — User logged in: priyanshuk9532@gmail.com
+[2026-05-14 22:39:13] INFO — backend.services.pdf_service:169 — Saved file: uploads\user_2\5acf4fdb1af1495ab2e1558e718abc00_PriyansuResume.pdf (106941 bytes)
+[2026-05-14 22:39:14] INFO — backend.services.pdf_service:52 — PDF extracted: 1 pages, 2498 chars
+[2026-05-14 22:39:14] INFO — backend.services.nlp_service:244 — Running NLP analysis pipeline...
+[2026-05-14 22:39:14] WARNING — backend.controllers.resume_controller:80 — NLP analysis failed (non-critical): No module named 'spacy'
+[2026-05-14 22:39:14] INFO — backend.controllers.resume_controller:102 — Resume uploaded: id=1, user=priyanshuk9532@gmail.com, file=PriyansuResume.pdf
+[2026-05-14 22:40:40] INFO — backend.controllers.analysis_controller:83 — Running ML analysis for resume_id=1
+[2026-05-14 22:40:40] INFO — backend.services.ml_service:143 — Starting full ATS analysis...
+[2026-05-14 22:40:40] INFO — backend.services.ml_service:168 — ATS complete — total: 59.2, keyword: 40.0, cosine: 14.69
+[2026-05-14 22:40:40] INFO — backend.models.resume_classifier:78 — [OK] Resume classifier trained on 20 samples (12 classes)
+[2026-05-14 22:40:40] DEBUG — backend.models.resume_classifier:114 — Classified as 'Backend Development' with 33.2% confidence
+[2026-05-14 22:40:40] DEBUG — backend.models.skill_predictor:102 — Skill prediction for 'Full Stack': 8 essential missing, 7 advanced missing
+[2026-05-14 22:40:40] ERROR — backend.services.gemini_service:38 — Failed to initialize Gemini: No module named 'google.generativeai'
+[2026-05-14 22:40:40] ERROR — backend.services.gemini_service:38 — Failed to initialize Gemini: No module named 'google.generativeai'
+[2026-05-14 22:40:40] INFO — backend.controllers.analysis_controller:154 — Analysis complete: report_id=1, ATS=59.2, user=priyanshuk9532@gmail.com
+[2026-05-14 22:42:15] INFO — backend.main:54 — [BYE] Application shutting down...
+[2026-05-14 22:42:18] INFO — backend.main:38 — [START] Starting AI Resume Analyzer v1.0.0
+[2026-05-14 22:42:18] INFO — backend.database.db:74 — [OK] Database tables created/verified successfully.
+[2026-05-14 22:42:18] INFO — backend.main:82 — [INFO]  Admin user already exists: admin@resumeanalyzer.com
+[2026-05-14 22:42:18] INFO — backend.main:50 — [OK] Application startup complete
+[2026-05-14 22:42:26] INFO — backend.main:54 — [BYE] Application shutting down...
+[2026-05-14 22:42:29] INFO — backend.main:38 — [START] Starting AI Resume Analyzer v1.0.0
+[2026-05-14 22:42:29] INFO — backend.database.db:74 — [OK] Database tables created/verified successfully.
+[2026-05-14 22:42:29] INFO — backend.main:82 — [INFO]  Admin user already exists: admin@resumeanalyzer.com
+[2026-05-14 22:42:29] INFO — backend.main:50 — [OK] Application startup complete
+[2026-05-14 22:43:13] INFO — backend.services.report_service:217 — PDF report generated: 4452 bytes
+[2026-05-14 22:43:16] INFO — backend.services.report_service:217 — PDF report generated: 4452 bytes
+[2026-05-14 22:46:19] INFO — backend.controllers.auth_controller:60 — New user registered: subhajit1@gmail.com (id=3)
+[2026-05-14 22:46:47] DEBUG — backend.utils.auth_utils:93 — Created JWT token for subject: subhajit1@gmail.com
+[2026-05-14 22:46:47] INFO — backend.controllers.auth_controller:101 — User logged in: subhajit1@gmail.com
+[2026-05-14 22:47:33] INFO — backend.services.pdf_service:169 — Saved file: uploads\user_3\2afa61cd21a943f4ac550a135941c87c_PriyanshuResume.pdf (106941 bytes)
+[2026-05-14 22:47:33] INFO — backend.services.pdf_service:52 — PDF extracted: 1 pages, 2498 chars
+[2026-05-14 22:47:33] INFO — backend.services.nlp_service:244 — Running NLP analysis pipeline...
+[2026-05-14 22:47:33] WARNING — backend.controllers.resume_controller:80 — NLP analysis failed (non-critical): No module named 'spacy'
+[2026-05-14 22:47:33] INFO — backend.controllers.resume_controller:102 — Resume uploaded: id=2, user=subhajit1@gmail.com, file=PriyanshuResume.pdf
+[2026-05-14 22:48:51] INFO — backend.controllers.analysis_controller:83 — Running ML analysis for resume_id=2
+[2026-05-14 22:48:51] INFO — backend.services.ml_service:143 — Starting full ATS analysis...
+[2026-05-14 22:48:51] INFO — backend.services.ml_service:168 — ATS complete — total: 59.2, keyword: 40.0, cosine: 14.69
+[2026-05-14 22:48:51] INFO — backend.models.resume_classifier:78 — [OK] Resume classifier trained on 20 samples (12 classes)
+[2026-05-14 22:48:51] DEBUG — backend.models.resume_classifier:114 — Classified as 'Backend Development' with 33.2% confidence
+[2026-05-14 22:48:51] DEBUG — backend.models.skill_predictor:102 — Skill prediction for 'Backend Development': 8 essential missing, 6 advanced missing
+[2026-05-14 22:48:51] ERROR — backend.services.gemini_service:38 — Failed to initialize Gemini: No module named 'google.generativeai'
+[2026-05-14 22:48:51] ERROR — backend.services.gemini_service:38 — Failed to initialize Gemini: No module named 'google.generativeai'
+[2026-05-14 22:48:51] INFO — backend.controllers.analysis_controller:154 — Analysis complete: report_id=2, ATS=59.2, user=subhajit1@gmail.com
+[2026-05-14 22:49:09] INFO — backend.services.report_service:217 — PDF report generated: 4444 bytes
+[2026-05-14 22:50:10] DEBUG — backend.utils.auth_utils:93 — Created JWT token for subject: subhajit1@gmail.com
+[2026-05-14 22:50:10] INFO — backend.controllers.auth_controller:101 — User logged in: subhajit1@gmail.com

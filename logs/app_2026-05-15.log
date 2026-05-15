@@ -1,0 +1,10 @@
+[2026-05-15 11:15:26] INFO — backend.main:38 — [START] Starting AI Resume Analyzer v1.0.0
+[2026-05-15 11:15:26] INFO — backend.database.db:74 — [OK] Database tables created/verified successfully.
+[2026-05-15 11:15:26] INFO — backend.main:82 — [INFO]  Admin user already exists: admin@resumeanalyzer.com
+[2026-05-15 11:15:26] INFO — backend.main:50 — [OK] Application startup complete
+[2026-05-15 11:16:08] DEBUG — backend.utils.auth_utils:93 — Created JWT token for subject: subhajit1@gmail.com
+[2026-05-15 11:16:08] INFO — backend.controllers.auth_controller:101 — User logged in: subhajit1@gmail.com
+[2026-05-15 11:23:31] INFO — backend.main:38 — [START] Starting AI Resume Analyzer v1.0.0
+[2026-05-15 11:23:31] INFO — backend.database.db:74 — [OK] Database tables created/verified successfully.
+[2026-05-15 11:23:31] INFO — backend.main:82 — [INFO]  Admin user already exists: admin@resumeanalyzer.com
+[2026-05-15 11:23:31] INFO — backend.main:50 — [OK] Application startup complete
